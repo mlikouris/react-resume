@@ -5,7 +5,7 @@ import Education from "./Eduction";
 import ResumeSection from "./ResumeSection";
 import Skills from "./Skills";
 import Summary from "./Summary";
-import resumeData from '../json/resume.json';
+import resumeData from '../json/resume-live.json';
 import ContactModal from "./ContactModal";
 
 const containerVariants = {
