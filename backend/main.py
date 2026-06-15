@@ -18,7 +18,7 @@ load_dotenv()
 sender_email = os.getenv("SENDER_EMAIL")
 app_password = os.getenv("APP_PASSWORD")
 smtp_server = os.getenv("SMTP_SERVER")
-smtp_port = 465
+smtp_port = int(os.getenv("SMTP_PORT", 465))
 mail_to = os.getenv("MAIL_TO")
 cloudflare_secret = os.getenv("CLOUDFLARE_SECRET_KEY")
 
