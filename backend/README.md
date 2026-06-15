@@ -32,7 +32,7 @@ This is the backend service for the resume website. It handles contact form subm
 
 3. **Environment Variables**:
    Ensure your `.env` file is populated with the following keys:
-   `SENDER_EMAIL`, `APP_PASSWORD`, `SMTP_SERVER`, `MAIL_TO`, `ALLOWED_ORIGINS`, and `CLOUDFLARE_SECRET_KEY`.
+   `SENDER_EMAIL`, `APP_PASSWORD`, `SMTP_SERVER`, `SMTP_PORT`, `MAIL_TO`, `ALLOWED_ORIGINS`, and `CLOUDFLARE_SECRET_KEY`.
 
 ## Running the Application
 

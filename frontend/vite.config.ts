@@ -17,6 +17,8 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    https: false // Instructs Vite to use the SSL certificate
+    https: false, // Instructs Vite to use the SSL certificate
+    port: 5173,
+    strictPort: true // Prevents Vite from switching to another port
   }
 })

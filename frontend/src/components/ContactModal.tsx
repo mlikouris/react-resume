@@ -92,8 +92,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
           {isGenerating ? (
             <Loader />
-          ): ""}
-          {message && !isError ? (
+          ) : message && !isError ? (
               <div>
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Thank You!</h2>
