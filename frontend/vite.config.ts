@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/resume/michael-likouris/',
+  base: '/',
   plugins: [
     react({
       // If you are trying to use the React Compiler, configure it here:
