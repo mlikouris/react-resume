@@ -21,7 +21,7 @@ const root = {
     return Math.random();
   },
   rollThreeDice() {
-    return [1, 2, 3].map((_) => 1 + Math.floor(Math.random() * 6));
+    return [1, 2, 3].map(() => 1 + Math.floor(Math.random() * 6));
   },
 };
 

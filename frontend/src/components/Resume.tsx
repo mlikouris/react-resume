@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Experience from "./work-experience/Experience";
 import Education from "./Eduction";
 import ResumeSection from "./ResumeSection";
@@ -8,7 +8,7 @@ import Summary from "./Summary";
 import resumeData from '../json/resume-live.json';
 import ContactModal from "./ContactModal";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -18,7 +18,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: -25 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
