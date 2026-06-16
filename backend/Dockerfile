@@ -14,4 +14,4 @@ COPY . .
 
 # Use shell form to allow environment variable expansion for PORT
 EXPOSE 8000
-ENTRYPOINT [ "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}" ]
+CMD ["sh", "-c", "exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
