@@ -2,8 +2,8 @@
 FROM python:3.11-slim
 
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
@@ -14,4 +14,4 @@ COPY . .
 
 # Use shell form to allow environment variable expansion for PORT
 EXPOSE 8000
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
+ENTRYPOINT [ "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}" ]
