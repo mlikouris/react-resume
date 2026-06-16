@@ -1,10 +1,16 @@
 name: react-resume-app
 region: nyc
 services:
+  - name: frontend
+    image: registry.digitalocean.com/<org>/react-resume-frontend:latest
+    run_command: "npm start" # or "serve -s build" for a static build
+    http_port: 80
+
   - name: backend
     source_dir: backend
     build_command: pip install -r requirements.txt
-    run_command: uvicorn main:app --host 0.0.0.0 --port ${PORT}
+    image: registry.digitalocean.com/<org>/react-resume-backend:latest
+    run_command: "gunicorn myproj.wsgi:application --bind 0.0.0.0:8000"
     envs:
       - key: SENDER_EMAIL
         scope: RUN_TIME
