@@ -3,3 +3,4 @@ backend/.env
 backend/__pycache__/
 backend/localhost+2-key.pem
 backend/localhost+2.pem
+.do
