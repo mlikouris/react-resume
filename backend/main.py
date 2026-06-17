@@ -51,6 +51,17 @@ class ContactSubmission(BaseModel):
     token: str = Field(..., alias="cf-turnstile-response", min_length=1)
 
 
+@app.get("/")
+async def root():
+    return {"service": "backend", "ok": True}
+
+
+@app.get("/ping")
+@app.get("/ping/")
+async def root_ping():
+    return {"ok": True}
+
+
 @app.get("/api/ping")
 @app.get("/api/ping/")
 async def ping():
@@ -63,6 +74,7 @@ async def ping():
 
 
 @app.post("/api/contact", status_code=status.HTTP_200_OK)
+@app.post("/api/contact/")
 async def submit_contact_form(payload: ContactSubmission):
     # 1. Verify Cloudflare Turnstile Token
     if not cloudflare_secret:
