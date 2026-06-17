@@ -51,6 +51,11 @@ class ContactSubmission(BaseModel):
     token: str = Field(..., alias="cf-turnstile-response", min_length=1)
 
 
+@app.get("/api/ping")
+async def ping():
+    return {"ok": True}
+
+
 # @app.get("/api/contact")
 # async def contact_form_info():
 #     return {"message": "The contact API is active. Please use POST to submit messages."}
