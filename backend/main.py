@@ -56,12 +56,6 @@ async def root():
     return {"service": "backend", "ok": True}
 
 
-@app.get("/ping")
-@app.get("/ping/")
-async def root_ping():
-    return {"ok": True}
-
-
 @app.get("/api/ping")
 @app.get("/api/ping/")
 async def ping():
@@ -69,7 +63,7 @@ async def ping():
 
 
 @app.get("/api/contact")
-@app.post("/api/contact/")
+@app.get("/api/contact/")
 async def contact_form_info():
     return {"message": "The contact API is active. Please use POST to submit messages."}
 
