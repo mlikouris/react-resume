@@ -36,7 +36,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["POST"],
+    allow_methods=["POST, GET"],
     allow_headers=["*"],
 )
 
@@ -68,9 +68,10 @@ async def ping():
     return {"ok": True}
 
 
-# @app.get("/api/contact")
-# async def contact_form_info():
-#     return {"message": "The contact API is active. Please use POST to submit messages."}
+@app.get("/api/contact")
+@app.post("/api/contact/")
+async def contact_form_info():
+    return {"message": "The contact API is active. Please use POST to submit messages."}
 
 
 @app.post("/api/contact", status_code=status.HTTP_200_OK)
