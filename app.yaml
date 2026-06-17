@@ -3,9 +3,16 @@ region: nyc
 
 services:
   - name: backend
+    github:
+      repo: mlikouris/react-resume
+      branch: main
+      deploy_on_push: true
     source_dir: backend
     dockerfile_path: Dockerfile
+    run_command: uvicorn main:app --host 0.0.0.0 --port 8000
     http_port: 8000
+    routes:
+      - path: /api
     envs:
       - key: SENDER_EMAIL
         scope: RUN_TIME
@@ -33,6 +40,10 @@ services:
 
 static_sites:
   - name: frontend
+    github:
+      repo: mlikouris/react-resume
+      branch: main
+      deploy_on_push: true
     source_dir: frontend
     build_command: npm install && npm run build
     output_dir: dist
