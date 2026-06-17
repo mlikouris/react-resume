@@ -68,7 +68,7 @@ async def contact_form_info():
     return {"message": "The contact API is active. Please use POST to submit messages."}
 
 
-@app.post("/api/contact", status_code=status.HTTP_200_OK)
+@app.post("/api/contact")
 @app.post("/api/contact/")
 async def submit_contact_form(payload: ContactSubmission):
     # 1. Verify Cloudflare Turnstile Token
