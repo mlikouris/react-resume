@@ -42,5 +42,3 @@ static_sites:
         value: ${BACKEND_URL}
     routes:
       - path: /
-    custom_domains:
-      - domain: likouris.com
