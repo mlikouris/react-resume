@@ -2,11 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Loader from './Loader';
 import { useState, useEffect } from 'react'
 import TurnstileWidget  from './TurnstileWidget';
-declare global {
-  interface Window {
-    turnstile?: unknown;
-  }
-}
 
 interface ContactModalProps {
   isOpen: boolean;
