@@ -52,6 +52,7 @@ class ContactSubmission(BaseModel):
 
 
 @app.get("/api/ping")
+@app.get("/api/ping/")
 async def ping():
     return {"ok": True}
 
