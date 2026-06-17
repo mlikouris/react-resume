@@ -50,22 +50,18 @@ class ContactSubmission(BaseModel):
     message: str
     token: str = Field(..., alias="cf-turnstile-response", min_length=1)
 
+# root endpoint is /api
+
 
 @app.get("/")
 async def root():
     return {"service": "backend", "ok": True}
 
 
-@app.get("/ping")
-@app.get("/ping/")
-async def ping():
-    return {"ok": True}
-
-
 @app.get("/contact")
 @app.get("/contact/")
 async def contact_form_info():
-    return {"message": "The contact API is active. Please use POST to submit messages."}
+    return {"message": "The contact API is active."}
 
 
 @app.post("/contact", status_code=status.HTTP_200_OK)
