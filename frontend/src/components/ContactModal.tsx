@@ -13,6 +13,7 @@ const ContactModal = ({ isOpen, onClose}: ContactModalProps) => {
   const [state, setState] = useState<'idle' | 'generating' | 'generated'>("idle");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isError, setIsError] = useState<boolean>(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
   const isGenerating = state === "generating";
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
@@ -25,17 +26,20 @@ const ContactModal = ({ isOpen, onClose}: ContactModalProps) => {
   // const buttonRef = useRef<HTMLElement>(null);
 
   // Automatically runs when the visitor passes the challenge
-  const handleTurnstileSuccess = () => {
+  const handleTurnstileSuccess = (token?: string) => {
+    setTurnstileToken(token ?? "");
     setButtonDisabled(false);
   }
 
   // Automatically runs if the token expires (tokens last 300 seconds)
   const handleTurnstileExpired = () => {
+    setTurnstileToken("");
     setButtonDisabled(true);
   }
 
   // Automatically runs if an error occurs
   const handleTurnstileError = () => {
+    setTurnstileToken("");
     setButtonDisabled(true);
   }
 
@@ -43,6 +47,14 @@ const ContactModal = ({ isOpen, onClose}: ContactModalProps) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formPayLoad = Object.fromEntries(formData.entries())
+    const token = turnstileToken.trim();
+
+    if (!token) {
+      setErrorMessage("Please complete the security check.");
+      setIsError(true);
+      return;
+    }
+
     try {
         setState("generating");
         setErrorMessage("");
@@ -53,7 +65,10 @@ const ContactModal = ({ isOpen, onClose}: ContactModalProps) => {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(formPayLoad)
+        body: JSON.stringify({
+          ...formPayLoad,
+          "cf-turnstile-response": token,
+        })
       })
 
       const data = await response.json();

@@ -36,7 +36,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["POST, GET"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -50,22 +50,28 @@ class ContactSubmission(BaseModel):
     message: str
     token: str = Field(..., alias="cf-turnstile-response", min_length=1)
 
-# root endpoint is /api
+# Root and contact endpoints are exposed both at the app root and under /api
+# so they work for both local development and the deployed route prefix.
 
 
 @app.get("/")
+@app.get("/api")
 async def root():
     return {"service": "backend", "ok": True}
 
 
 @app.get("/contact")
 @app.get("/contact/")
+@app.get("/api/contact")
+@app.get("/api/contact/")
 async def contact_form_info():
     return {"message": "The contact API is active."}
 
 
 @app.post("/contact", status_code=status.HTTP_200_OK)
-@app.post("contact/")
+@app.post("/contact/", status_code=status.HTTP_200_OK)
+@app.post("/api/contact", status_code=status.HTTP_200_OK)
+@app.post("/api/contact/", status_code=status.HTTP_200_OK)
 async def submit_contact_form(payload: ContactSubmission):
     # 1. Verify Cloudflare Turnstile Token
     if not cloudflare_secret:

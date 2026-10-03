@@ -16,6 +16,7 @@
     "@apollo/server": "^5.5.1",
     "@emnapi/core": "^1.11.1",
     "@emnapi/runtime": "^1.11.1",
+    "@react-pdf/renderer": "^4.5.1",
     "@tailwindcss/vite": "^4.2.2",
     "express": "^5.2.1",
     "framer-motion": "^12.4.7",

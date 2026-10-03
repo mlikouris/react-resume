@@ -5,7 +5,7 @@ interface Turnstile {
     container: string | HTMLElement,
     options: {
       sitekey: string;
-      callback?: () => void;
+      callback?: (token: string) => void;
       "expired-callback"?: () => void;
       "error-callback"?: () => void;
     }
@@ -24,7 +24,7 @@ interface TurnstileWidgetProps {
   isOpen: boolean;
   onTurnstileError: () => void;
   onTurnstileExpired: () => void;
-  onTurnstileSuccess: () => void;
+  onTurnstileSuccess: (token?: string) => void;
 }
 
 const TurnstileWidget = (

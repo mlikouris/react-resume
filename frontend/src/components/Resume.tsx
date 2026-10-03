@@ -23,6 +23,7 @@ const itemVariants: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
+
 const Resume = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -38,6 +39,13 @@ const Resume = () => {
             type="button"
             onClick={() => setIsModalOpen(true)}
           >Contact</button>
+          <a
+            href="/pdf/michael-likouris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-lead__contact ml-2 px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-md text-sm font-bold transition-colors cursor-pointer"
+            type="button"
+          >Download PDF</a>
         </div>
       </div>
         <ResumeSection heading="Summary">

@@ -6,55 +6,100 @@
     "email": null,
     "linkedin": "https://www.linkedin.com/in/michael-likouris"
   },
-  "summary": "Senior Staff Software Engineer with 15+ years of experience building scalable, high-performance web applications and frontend platforms. Expertise in JavaScript, TypeScript, React, and modern build tooling, with a strong focus on performance optimization, accessibility (WCAG), and scalable component architectures. Proven leader who mentors engineers, drives engineering best practices, and delivers responsive, enterprise-grade applications for global organizations including Google, Amazon, and Walmart.",
+  "summary": "Senior frontend engineer with 15+ years of experience building scalable, high-performance web applications and frontend platforms. Expertise in JavaScript, TypeScript, and modern build tooling, with a strong focus on performance optimization, accessibility (WCAG), and scalable component architectures. Proven leader who mentors engineers, drives engineering best practices, and delivers responsive, enterprise-grade applications for global organizations including Google, Amazon, and Johnson & Johnson. Increasingly focused on applying AI-assisted development workflows (Claude Code, GitHub Copilot, Gemini Code Assist) to accelerate delivery without sacrificing quality.",
   "experience": [
     {
       "id": "vanderhouwen",
       "company": "VanderHouwen",
       "location": "Portland, Oregon",
-      "title": "Senior Staff Software Engineer",
-      "type": "Contract",
-      "startDate": "2026-02-27T00:00",
-      "endDate": "2026-05-21T00:00",
-      "current": false,
-      "highlights": [
-        "Developed an AI-powered search interface for a public policy platform using TypeScript and REST APIs, implementing markdown parsing, citation rendering, and end-to-end testing with Cypress."
+      "position": [
+          {
+          "id": "vanderhouwen-software-engineer",
+          "title": "Frontend Software Engineer",
+          "type": "Short-Term Contract",
+          "startDate": "2026-02-01T00:00",
+          "endDate": "2026-05-31T00:00",
+          "current": false,
+          "highlights": [
+            "Built an AI-powered search interface for Google’s public policy site in TypeScript, integrating REST APIs to deliver real-time query results with rendered citations.",
+            "Used Gemini Code Assist throughout the engagement to scaffold components and accelerate delivery on a compressed contract timeline, without sacrificing test coverage or code quality.",
+            "Implemented markdown parsing and citation-rendering logic to present sourced, readable answers to end users.",
+            "Established end-to-end test coverage with Cypress, catching regressions before release on a fast-moving contract timeline."
+          ]
+        }
       ]
     },
     {
       "id": "brightspot",
       "company": "Brightspot",
       "location": "Reston, Virginia",
-      "title": "Senior Staff Software Engineer",
-      "type": "Full-time",
-      "startDate": "2026-07-15T00:00",
-      "endDate": "2025-11-14T00:00",
-      "current": false,
-      "highlights": [
-        "Built responsive enterprise web platforms for global clients including Google, Amazon, Walmart, and Johnson & Johnson, supporting millions of monthly users.",
-        "Managed and mentored two frontend engineers, conducting weekly 1:1s, performance reviews, and technical guidance to improve team productivity and code quality.",
-        "Designed scalable frontend component architectures using atomic design methodology, enabling reuse across multiple enterprise client platforms.",
-        "Improved web performance by optimizing Core Web Vitals (FCP, LCP, CLS, TBT), increasing Lighthouse performance scores by 20% across multiple client platforms.",
-        "Followed content accessibility guidelines and standards, ensuring sites were compliant for OS screen reader and Chrome Lighthouse accessibility tests. Improved accessibility rating by 15%.",
-        "Produced a vendor portal that provided users ability to manage office work space environments.",
-        "Created a publisher feedback interface for the Brightspot CMS content preview window.",
-        "Implemented Google Tag Manager on client sites and set up a scalable solution for pushing data to the data layer.",
-        "Contributed to client's frontend component library, providing rich CSS animated experiences.",
-        "Utilized BEM principles in HTML Handlebars files.",
-        "Leveraged Less and Sass preprocessors to provide a more maintainable CSS codebase.",
-        "Wrote custom classes in both vanilla JavaScript and TypeScript.",
-        "Used Webpack to validate, manage, and build packages and libraries; leveraged Webpack to make code modular and improve site performance and code usability.",
-        "Created quality prototypes on tight timelines.",
-        "Assisted back-end developers in coding and troubleshooting.",
-        "Followed atomic design methodology for sites scaled out to all of the client's product sites.",
-        "Worked closely with design teams to retrofit existing websites with responsive layouts for mobile devices."
+      "position": [
+        {
+          "id": "brightspot-staff",
+          "title": "Staff Frontend Engineer",
+          "type": "retitled as part of a company-wide leveling change",
+          "startDate": "2025-02-01T00:00",
+          "endDate": "2025-11-30T00:00",
+          "current": false,
+          "highlights": [
+            "Contributed to client's frontend component library, providing rich CSS-animated experiences reused across enterprise sites.",
+            "Improved web performance by optimizing Core Web Vitals (FCP, LCP, CLS, TBT), increasing Lighthouse performance scores by 20% across multiple client platforms.",
+            "Implemented Google Tag Manager on client sites and set up a scalable solution for pushing data to the data layer."
+          ]
+        },
+        {
+          "id": "brightspot-principal",
+          "title": "Principal Software Engineer",
+          "type": "Full-time",
+          "startDate": "2020-02-01T00:00",
+          "endDate": "2025-01-01T00:00",
+          "current": false,
+          "highlights": [
+            "Built responsive enterprise web platforms for global clients including Google, Amazon, and Johnson & Johnson.",
+            "Managed and mentored two frontend engineers, conducting weekly 1:1s, performance reviews, and technical guidance to improve team productivity and code quality.",
+            "Collaborated with backend engineers to define REST API contracts and JSON data structures, ensuring clear separation of concerns.",
+            "Designed scalable frontend component architectures using atomic design methodology, enabling reuse across multiple enterprise client platforms.",
+            "Produced a vendor portal that provided users the ability to manage office workspace environments.",
+            "Created a communication interface for publishers within Brightspot CMS to leave feedback within the content preview window.",
+            "Handled complex asynchronous data states, including loading, error handling, and empty states, to improve overall user experience."
+          ]
+        },
+        {
+          "id": "brightspot-senior",
+          "title": "Senior Software Engineer",
+          "type": "Full-time",
+          "startDate": "2016-02-01T00:00",
+          "endDate": "2020-01-01T00:00",
+          "current": false,
+          "highlights": [
+            "Used Webpack to validate, manage, and build packages and libraries, making code modular and improving site performance and usability.",
+            "Followed content accessibility guidelines and standards, ensuring sites were compliant for OS screen reader and Chrome Lighthouse accessibility tests; improved accessibility rating by 15%.",
+            "Utilized BEM principles in developing custom components for client sites.",
+            "Leveraged Less and Sass preprocessors to provide a more maintainable CSS codebase.",
+            "Supported the platform team with frontend patches for Brightspot CMS."
+          ]
+        },
+        {
+          "id": "brightspot-engineer",
+          "title": "Software Engineer",
+          "type": "Full-time",
+          "startDate": "2011-07-01T00:00",
+          "endDate": "2016-01-01T00:00",
+          "current": false,
+          "highlights": [
+            "Developed custom utility libraries in vanilla JavaScript.",
+            "Assisted back-end developers in coding and troubleshooting.",
+            "Developed custom prototypes for clients as proof of concept.",
+            "Worked closely with design teams to retrofit an existing website with a responsive layout for mobile devices."
+          ]
+        }
       ]
     },
     {
       "id": "aol",
       "company": "AOL",
       "location": "Dulles, Virginia",
-      "title": "Editor – Software Engineer",
+      "title": "Software Engineer",
       "type": "Full-time",
       "startDate": "2003-10-27T00:00",
       "endDate": "2011-07-12T00:00",
@@ -71,45 +116,36 @@
       "location": "Washington, D.C.",
       "degree": "Bachelor of Arts",
       "field": "Communications and Visual Media",
+      "startDate": "1996-09-01T00:00",
+      "endDate": "2000-05-17T00:00",
+      "current": false,
       "graduationYear": 2000
     }
   ],
   "skills": [
     {
       "heading": "Languages",
-      "items": ["JavaScript", "TypeScript", "HTML5", "CSS3"]
+      "items": ["JavaScript", "TypeScript", "HTML5", "CSS3", "Sass & Less"]
     },
     {
       "heading": "Frameworks & Libraries",
       "items": ["React", "Web Components", "Handlebars", "Tailwind CSS", "Bootstrap", "Showdown"]
     },
     {
-      "heading": "Build Tools",
-      "items": ["Webpack", "Vite", "NPM", "Yarn"]
-    },
-    {
-      "heading": "Testing",
-      "items": ["Cypress"]
+      "heading": "Build & Testing",
+      "items": ["Webpack", "Vite", "npm", "Yarn", "Cypress"]
     },
     {
       "heading": "DevOps & Infrastructure",
-      "items": ["Docker", "CI/CD", "GitHub Actions", "Linux"]
+      "items": ["Docker", "CI/CD", "GitHub Actions", "DigitalOcean", "Linux"]
     },
     {
-      "heading": "Analytics & Tagging",
-      "items": ["Google Tag Manager", "Google Analytics"]
+      "heading": "Platforms & Analytics",
+      "items": ["Brightspot CMS", "WordPress", "Google Tag Manager", "Google Analytics"]
     },
     {
-      "heading": "CMS Platforms",
-      "items": ["Brightspot CMS", "WordPress"]
-    },
-    {
-     "heading": "Developer Tools",
-      "items": ["GitHub", "Gerrit", "Bitbucket", "VS Code"]
-    },
-    {
-      "heading": "AI Development Tools",
-      "items": ["GitHub Copilot", "Gemini Code Assist", "Claude Code"]
+      "heading": "Developer & AI Tools",
+      "items": ["GitHub", "Gerrit", "Bitbucket", "VS Code", "Claude Code", "GitHub Copilot", "Gemini Code Assist"]
     }
   ]
 }
