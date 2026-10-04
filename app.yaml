@@ -1,6 +1,10 @@
 name: react-resume-app
 region: nyc
-
+domains:
+  - domain: likouris.com
+    type: PRIMARY
+  - domain: www.likouris.com
+    type: ALIAS
 services:
   - name: backend
     github:
