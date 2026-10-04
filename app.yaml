@@ -37,19 +37,18 @@ services:
     instance_count: 1
     instance_size_slug: basic-xxs
 
+static_sites:
   - name: frontend
     github:
       repo: mlikouris/react-resume
       branch: main
       deploy_on_push: true
     source_dir: frontend
-    environment_slug: node
-    dockerfile_path: frontend/Dockerfile
-    routes:
-      - path: /
+    build_command: npm install && npm run build
+    output_dir: dist
     envs:
       - key: VITE_API_URL
         scope: BUILD_TIME
         value: ${BACKEND_URL}
-    instance_count: 1
-    instance_size_slug: basic-xxs
+    routes:
+      - path: /
