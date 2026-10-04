@@ -54,22 +54,17 @@ class ContactSubmission(BaseModel):
 # so they work for both local development and the deployed route prefix.
 
 
-@app.get("/")
 @app.get("/api")
 async def root():
     return {"service": "backend", "ok": True}
 
 
-@app.get("/contact")
-@app.get("/contact/")
 @app.get("/api/contact")
 @app.get("/api/contact/")
 async def contact_form_info():
     return {"message": "The contact API is active."}
 
 
-@app.post("/contact", status_code=status.HTTP_200_OK)
-@app.post("/contact/", status_code=status.HTTP_200_OK)
 @app.post("/api/contact", status_code=status.HTTP_200_OK)
 @app.post("/api/contact/", status_code=status.HTTP_200_OK)
 async def submit_contact_form(payload: ContactSubmission):

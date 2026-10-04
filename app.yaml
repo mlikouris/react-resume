@@ -56,3 +56,4 @@ static_sites:
         value: ${BACKEND_URL}
     routes:
       - path: /
+    catchall_document: index.html
